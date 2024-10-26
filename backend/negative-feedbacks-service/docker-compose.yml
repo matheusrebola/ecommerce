@@ -3,21 +3,21 @@ version: "3.8"
 services:
   mysql:
     image: mysql:8.0
-    container_name: myapp-mysql
+    container_name: negative-feedback-mysql
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
-      MYSQL_DATABASE: testdb
-      MYSQL_USER: myuser
-      MYSQL_PASSWORD: mypassword
+      MYSQL_ROOT_PASSWORD: ${PASSWORD_ROOT:negative-feedback}
+      MYSQL_DATABASE: negative-feedback-db
+      MYSQL_USER: ${USERNAME:negative-feedback}
+      MYSQL_PASSWORD: ${USERPASS:negative-feedback}
     ports:
-      - "3306:3306"
+      - "60020:3306"
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
-      - myapp-network
+      - ecommerce-network
 
 networks:
-  myapp-network:
+  ecommerce-network:
     driver: bridge
 
 volumes:

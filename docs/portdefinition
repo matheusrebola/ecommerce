@@ -1,0 +1,39 @@
+customers-service:
+  MySQL: 60010
+  Application: 50010
+
+negative-feedbacks-service:
+  MySQL: 60020
+  Application: 50020
+
+orders-service:
+  MySQL: 60030
+  Application: 50030
+
+payments-service:
+  MySQL: 60040
+  Application: 50040
+
+product-categories-service:
+  MySQL: 60050
+  Application: 50050
+
+products-service:
+  MySQL: 60060
+  Application: 50060
+
+recomendations-service:
+  MySQL: 60070
+  Application: 50070
+
+reviews-service:
+  MySQL: 60080
+  Application: 50080
+
+shopping-cart-service:
+  MySQL: 60090
+  Application: 50090
+
+user-activity-logs-service:
+  MySQL: 60100
+  Application: 50100
