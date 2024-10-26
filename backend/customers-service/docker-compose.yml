@@ -8,7 +8,7 @@ services:
       MYSQL_ROOT_PASSWORD: ${PASSWORD_ROOT:customers-service}
       MYSQL_DATABASE: customers-service-db
       MYSQL_USER: ${USERNAME:customers-service}
-      MYSQL_PASSWORD: ${USERPASS:mypassword}
+      MYSQL_PASSWORD: ${USERPASS:customers-service}
     ports:
       - "60010:3306"
     volumes:
