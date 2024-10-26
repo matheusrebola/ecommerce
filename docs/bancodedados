@@ -1,0 +1,98 @@
+1. Usuários (Customers):
+
+    ID do Usuário (Primary Key)
+    Nome Completo
+    E-mail (único)
+    Data de Cadastro
+    Histórico de Compras (ID de pedidos, produtos comprados, datas, valor total)
+    Preferências de Produtos (categorias ou tags de interesse)
+    Feedbacks/Comentários (relevante para análise de sentimentos)
+    Data de Criação
+    Data de Última Atividade
+    Preferências de Comunicação (ex.: recebe promoções por e-mail)
+
+2. Produtos (Products):
+
+    ID do Produto (Primary Key)
+    Nome do Produto
+    Descrição (útil para recomendações baseadas em conteúdo)
+    Preço
+    Desconto (caso aplicável)
+    Estoque Disponível
+    Categoria (ex.: eletrônicos, roupas, etc.)
+    Subcategoria
+    Marca
+    Data de Inclusão
+    Tags de Produto (palavras-chave para filtragem e recomendações)
+    Avaliações dos Usuários (texto, notas de 1 a 5, data de avaliação, útil para análise de sentimentos)
+
+3. Pedidos (Orders):
+
+    ID do Pedido (Primary Key)
+    ID do Usuário (Foreign Key, referenciando a tabela de Usuários)
+    ID dos Produtos (relacionamento com a tabela de Produtos, incluindo quantidade de cada item)
+    Data do Pedido
+    Status do Pedido (pago, entregue, cancelado, etc.)
+    Valor Total do Pedido
+    Itens do Pedido (IDs dos produtos, quantidades, preços unitários)
+    Endereço de Entrega
+    Data de Envio
+    Data de Entrega
+    Tempo de Processamento e Entrega (para análise de eficiência logística)
+
+4. Categorias de Produtos (Product Categories):
+
+    ID da Categoria (Primary Key)
+    ID da Categoria Pai (para categorias hierárquicas)
+    Nome da Categoria
+    Descrição da Categoria
+
+5. Carrinhos de Compras (Shopping Cart):
+
+    ID do Carrinho (Primary Key)
+    ID do Usuário (Foreign Key)
+    Data de Criação do Carrinho
+    Itens no Carrinho (IDs de produtos, quantidades, subtotal)
+    Data de Adição
+
+6. Pagamentos (Payments):
+
+    ID do Pagamento (Primary Key)
+    ID do Pedido (Foreign Key, referenciando a tabela de Pedidos)
+    ID do Usuário (Foreign Key)
+    Valor Pago
+    Data do Pagamento
+    Método de Pagamento (cartão, PayPal, etc.)
+    Status do Pagamento (aprovado, recusado, pendente)
+
+7. Recomendações e Preferências (Recommendations):
+
+    ID do Feedback (chave primária, UUID)
+    ID do Usuário (Foreign Key)
+    Produtos Recomendados (lista de IDs de produtos)
+
+8. Histórico de Navegação (User Activity Logs):
+
+    ID do Feedback (chave primária, UUID)
+    ID do Usuário (Foreign Key)
+    Data da Ação
+    Origem da Visualização (ex.: pesquisa, recomendação, URL externa)
+    ID do Produto Visualizado (opcional)
+    Termos de Pesquisa (opcional)
+
+9. Avaliações e Comentários (Reviews):
+
+    ID da Avaliação (Primary Key)
+    ID do Produto (Foreign Key)
+    ID do Usuário (Foreign Key)
+    Nota (de 1 a 5)
+    Comentário (texto livre, essencial para análise de sentimentos)
+    Data da Avaliação
+
+10. Logs de Feedbacks Negativos:
+
+    ID do Feedback
+    ID do Pedido/Produto
+    Descrição do Problema (texto do Usuário)
+    Data
+    Status de Resolução (resolvido, em aberto)
