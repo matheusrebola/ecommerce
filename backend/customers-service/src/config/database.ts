@@ -1,15 +1,15 @@
 // src/config/database.ts
 import { DataSource } from "typeorm";
-import { User } from "../entities/User";
+import { Customers } from "../entities/Customers";
 import "reflect-metadata";
 
 export const AppDataSource = new DataSource({
   type: "mysql",
   host: "localhost",
-  port: 3306,
-  username: "root",
-  password: "password",
-  database: "testdb",
+  port: 60010,
+  username: "customers-service",
+  password: "customers-service",
+  database: "customers-service-db",
   synchronize: true,
-  entities: [User],
+  entities: [Customers],
 });
