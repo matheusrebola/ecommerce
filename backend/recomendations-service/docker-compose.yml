@@ -10,7 +10,7 @@ services:
       MYSQL_USER: ${USERNAME:recomendations-service}
       MYSQL_PASSWORD: ${USERPASS:recomendations-service}
     ports:
-      - "60020:3306"
+      - "60070:3306"
     volumes:
       - mysql-data:/var/lib/mysql
     networks:
