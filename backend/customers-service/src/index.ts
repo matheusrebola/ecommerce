@@ -1,8 +1,9 @@
 import express from "express";
 import { AppDataSource } from "./config/database";
-import { getAllUsers, createUser } from "./controllers/UserController";
+import { getAllUsers, createUser } from "./controllers/CustomersController";
 
 const app = express();
+const port = 50010;
 app.use(express.json());
 
 app.get("/users", getAllUsers);
@@ -10,8 +11,8 @@ app.post("/users", createUser);
 
 AppDataSource.initialize()
   .then(() => {
-    app.listen(3000, () => {
-      console.log("Server running on port 3000");
+    app.listen(50010, () => {
+      console.log("Server running on port: "+port);
     });
   })
   .catch((error) => console.log(error));
