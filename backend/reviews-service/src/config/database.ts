@@ -1,6 +1,6 @@
 // src/config/database.ts
 import { DataSource } from "typeorm";
-//import { User } from "../entities/User";
+import { Reviews } from "../entities/Reviews";
 import "reflect-metadata";
 
 export const AppDataSource = new DataSource({
@@ -11,5 +11,5 @@ export const AppDataSource = new DataSource({
   password: "reviews-service",
   database: "reviews-service-db",
   synchronize: true,
-//  entities: [User],
+  entities: [Reviews],
 });

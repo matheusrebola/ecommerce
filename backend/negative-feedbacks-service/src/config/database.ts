@@ -1,6 +1,6 @@
 // src/config/database.ts
 import { DataSource } from "typeorm";
-//import { User } from "../entities/User";
+import { NegativeFeedbacks } from "../entities/NegativeFeedbacks";
 import "reflect-metadata";
 
 export const AppDataSource = new DataSource({
@@ -11,5 +11,5 @@ export const AppDataSource = new DataSource({
   password: "negative-feedback",
   database: "negative-feedback-db",
   synchronize: true,
-  //entities: [User],
+  entities: [NegativeFeedbacks],
 });
