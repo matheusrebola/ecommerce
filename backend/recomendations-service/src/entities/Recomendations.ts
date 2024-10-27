@@ -4,5 +4,5 @@ import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 export class Recomendations{
   @PrimaryGeneratedColumn()
   id!:string;
-
+  customerId!:string;
 }

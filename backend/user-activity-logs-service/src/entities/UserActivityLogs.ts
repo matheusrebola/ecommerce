@@ -9,4 +9,6 @@ export class UserActivityLogs{
   dataAcao!:Date;
 
   origemVisualizacao!:EOrigemVisualizacao;
+
+  customerId!:string;
 }

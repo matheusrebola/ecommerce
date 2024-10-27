@@ -8,4 +8,6 @@ export class ShoppingCarts{
   dataCriacaoCarrinho!:Date;
 
   dataAdicao!:Date;
+
+  customerId!:string;
 }

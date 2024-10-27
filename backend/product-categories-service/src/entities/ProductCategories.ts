@@ -8,4 +8,6 @@ export class ProductCategories{
   nome!:string;
 
   descricao!:string;
+
+  productId!:string;
 }

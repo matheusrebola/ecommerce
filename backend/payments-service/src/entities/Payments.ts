@@ -14,4 +14,6 @@ export class Payments{
   metodoPagamento!:EMetodoPagamento;
 
   statusPagamento!:EStatusPagamento;
+
+  orderId!:string;
 }

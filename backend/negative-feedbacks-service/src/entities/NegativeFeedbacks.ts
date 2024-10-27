@@ -11,4 +11,8 @@ export class NegativeFeedbacks{
   dataFeedback!:Date;
 
   statusResolucao!:EStatusResolucao;
+
+  productId!:string;
+
+  orderId!:string;
 }

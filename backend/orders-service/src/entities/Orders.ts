@@ -25,4 +25,6 @@ export class Orders{
 
   @Column()
   tempoProcessamentoEntrega!:Date;
+
+  customerId!:string;
 }

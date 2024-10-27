@@ -16,4 +16,5 @@ export class Products{
   marca!:string;
   dataInclusao!:Date;
   tagsProduto!:string;
+  shoppingCartId!:string;
 }

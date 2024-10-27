@@ -13,4 +13,7 @@ export class Reviews{
 
   dataAvaliacao!:Date;
 
+  customerId!:string;
+
+  productId!:string;
 }
