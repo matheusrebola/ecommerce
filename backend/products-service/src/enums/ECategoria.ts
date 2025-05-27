@@ -1,3 +1,0 @@
-export enum ECategoria{
-  ELETRONICOS, ROUPAS, ELTRO_DOMESTICOS
-}
